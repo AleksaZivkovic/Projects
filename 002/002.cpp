@@ -3,6 +3,7 @@
 #include <vector>
 
 int main(){
+	String name = "";
 
 
 	return 0;
