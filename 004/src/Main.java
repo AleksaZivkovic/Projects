@@ -1,5 +1,4 @@
 import com.fazecast.jSerialComm.SerialPort;
-
 import javax.swing.*;
 import java.io.IOException;
 

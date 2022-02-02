@@ -1,5 +1,4 @@
 import com.fazecast.jSerialComm.SerialPort;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowEvent;
@@ -103,9 +102,7 @@ public class ColorPicker {
             String sData = sR + sG + sB;
             try {
                 fnWriteData(sData);
-            } catch (InterruptedException ex) {
-                ex.printStackTrace();
-            } catch (IOException ex) {
+            } catch (InterruptedException | IOException ex) {
                 ex.printStackTrace();
             }
         });
@@ -122,9 +119,7 @@ public class ColorPicker {
             public void windowClosing(WindowEvent e) {
                 try {
                     fnClose();
-                } catch (InterruptedException ex) {
-                    ex.printStackTrace();
-                } catch (IOException ex) {
+                } catch (InterruptedException | IOException ex) {
                     ex.printStackTrace();
                 }
             }
@@ -176,8 +171,6 @@ public class ColorPicker {
 
         if (spPort.closePort()) {
             System.out.println("close");
-        } else {
-            return;
         }
     }
 
